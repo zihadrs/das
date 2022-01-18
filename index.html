@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+
+        }
+        .zz{
+            background-color:black;
+            width: 555px;
+          padding: 22px;
+        }
+        .zz li{
+            margin: 42px 0;
+            font-weight: bolder;
+            text-transform: uppercase;
+            position: relative;
+            list-style-type: none;
+            color: white;
+        }
+        .zz li::before{
+            content: '';
+         
+          position: absolute;
+          top: calc(100% + 5px);
+           background-color: rgb(170,167,173);
+            width: 100%;
+            height: 25px;
+            border-radius:22PX;
+            left: 0;
+        }
+        .zz li::after{
+            content: '';
+         
+          position: absolute;
+          top: calc(100% + 5px);
+           background-color: rgb(249,249,250);
+            width: 0;
+            height: 25px;
+            border-radius:22PX;
+            left: 0;
+
+            animation-duration: 5s;
+            animation-timing-function: linear;
+            animation-delay:1s;
+            animation-iteration-count: 5;
+            animation-direction:forward;
+
+        }
+        .zz li.html::after{
+          animation-name: html;
+
+        }
+        @keyframes html {
+            to{
+                width: 90%;
+                background-color: red;
+            }
+            
+        }
+        .zz li.bb::after{
+          animation-name: bb;
+
+        }
+        @keyframes bb{
+            to{
+                width: 55%;
+                background-color:orange;
+            }
+            
+        }
+        .zz li.cc::after{
+          animation-name: cc;
+
+        }
+        @keyframes cc {
+            to{
+                width: 65%;
+                background-color: olive;
+            }
+            
+        }
+        .zz li.d::after{
+          animation-name: d;
+
+        }
+        @keyframes d {
+            to{
+                width: 75%;
+                background-color: black;
+            }
+            
+        }
+        .zz li.e::after{
+          animation-name: e;
+
+        }
+        @keyframes e {
+            to{
+                width: 45%;
+                background-color: yellowgreen;
+            }
+            
+        }
+        .zz li.f::after{
+          animation-name: f;
+
+        }
+        @keyframes f {
+            to{
+                width: 55%;
+                background-color: gold;
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="zz">
+        <ul>
+            <li class="html">HTML</li>
+            <li class="bb">CSS</li>
+            <li class="cc">BOOSTRAP</li>
+            <li class="d">JAVA</li>
+            <li class="e">C++</li>
+            <li class="f">PYTHON</li>
+        </ul>
+    </div>
+</body>
+</html>
